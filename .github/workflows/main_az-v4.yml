@@ -29,10 +29,11 @@ jobs:
         shell: pwsh
         run: |
           pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
-          npm -g install pnpm 
-          pnpm i
-          pnpm build 
-          pnpm test
+          
+          npm i
+          npm run build 
+          npm run test
+          npm prune --production
           popd
 
       - name: 'Run Azure Functions Action'
