@@ -68,6 +68,7 @@
     "collectCoverageFrom": [
       "**/*.(t|j)s"
     ],
+    "transformIgnorePatterns": ["/node_modules\/(?!my-package)(.*)"],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
   }
