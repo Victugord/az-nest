@@ -31,8 +31,8 @@ jobs:
           pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
           npm -g install pnpm 
           pnpm i
-          pnpm build --if-present
-          pnpm test --if-present
+          pnpm build 
+          pnpm test
           popd
 
       - name: 'Run Azure Functions Action'
